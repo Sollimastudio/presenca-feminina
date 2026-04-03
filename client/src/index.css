@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lora:wght@400;500;600&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -43,39 +45,61 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  /* Premium Color Palette */
+  --primary: oklch(0.7 0.18 20);      /* Rosé queimado */
+  --primary-foreground: oklch(1 0 0); /* Off-white */
+  --sidebar-primary: oklch(0.7 0.18 20);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  
+  /* Accent colors */
+  --accent: oklch(0.7 0.18 20);       /* Rosé queimado */
+  --accent-foreground: oklch(1 0 0);
+  
+  /* Chart colors */
+  --chart-1: oklch(0.7 0.18 20);
+  --chart-2: oklch(0.65 0.15 25);
+  --chart-3: oklch(0.6 0.12 30);
+  --chart-4: oklch(0.55 0.1 35);
+  --chart-5: oklch(0.5 0.08 40);
+  
+  --radius: 0.5rem;
+  
+  /* Background & Foreground */
+  --background: oklch(0.98 0.001 60);  /* Off-white #FAF7F2 */
+  --foreground: oklch(0.08 0.01 0);    /* Preto #111111 */
+  
+  /* Card styling */
+  --card: oklch(1 0 0);                /* Branco puro */
+  --card-foreground: oklch(0.08 0.01 0);
+  
+  /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --popover-foreground: oklch(0.08 0.01 0);
+  
+  /* Secondary */
+  --secondary: oklch(0.96 0.002 70);   /* Bege suave #F5F1EA */
+  --secondary-foreground: oklch(0.3 0.01 0);
+  
+  /* Muted */
+  --muted: oklch(0.93 0.002 70);
+  --muted-foreground: oklch(0.5 0.01 0);
+  
+  /* Destructive */
+  --destructive: oklch(0.7 0.18 20);
+  --destructive-foreground: oklch(1 0 0);
+  
+  /* Borders & Input */
+  --border: oklch(0.92 0.002 70);
+  --input: oklch(0.96 0.002 70);
+  --ring: oklch(0.7 0.18 20);
+  
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.001 60);
+  --sidebar-foreground: oklch(0.08 0.01 0);
+  --sidebar-accent: oklch(0.7 0.18 20);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.92 0.002 70);
+  --sidebar-ring: oklch(0.7 0.18 20);
 }
 
 .dark {
@@ -117,8 +141,32 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: 'Lora', serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+  
+  p {
+    @apply text-lg leading-relaxed;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -131,27 +179,21 @@
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
   }
+  
+  /* Premium button styling */
+  button {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +204,32 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
+  }
+  
+  /* Premium button variant */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold;
+    @apply hover:shadow-lg transition-all duration-300;
+    @apply active:scale-95;
+  }
+  
+  /* Progress bar styling */
+  .progress-bar {
+    @apply h-1 bg-secondary rounded-full overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-primary transition-all duration-300;
   }
 }
