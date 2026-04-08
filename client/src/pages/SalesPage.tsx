@@ -147,7 +147,16 @@ export default function SalesPage() {
                 GARANTIA 7 DIAS
               </div>
 
-              <div className="w-12 h-1 bg-primary rounded-full mb-12 mt-6" />
+              {/* Book Cover Image */}
+              <div className="mb-8 rounded-lg overflow-hidden border border-primary/30 shadow-lg">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032420666/7UJh3d9596UnSnriY2LXYF/manual-atracao-cover-SMYa6eZdz2epGs2k6sWkmv.webp" 
+                  alt="Manual da Atracao Cover" 
+                  className="w-full h-auto"
+                />
+              </div>
+              
+              <div className="w-12 h-1 bg-primary rounded-full mb-6 mt-6" />
               <h3 className="text-3xl font-bold text-foreground mb-2">
                 Manual da Atracao
               </h3>
@@ -157,17 +166,19 @@ export default function SalesPage() {
                 Correcao inicial, entendimento profundo e reorganizacao do seu padrao. Um guia pratico e reflexivo para remover a rigidez e recuperar sua leveza.
               </p>
 
-              {/* Pricing Section */}
-              <div className="bg-secondary/50 p-6 rounded-lg mb-8 border border-border">
-                <p className="text-sm text-foreground/60 mb-2">De:</p>
-                <p className="text-2xl font-bold text-foreground/40 line-through mb-4">R$ 197,00</p>
+              {/* Pricing Section - HIGHLIGHTED */}
+              <div className="bg-gradient-to-br from-primary/20 to-primary/10 p-8 rounded-lg mb-8 border-2 border-primary shadow-lg">
+                <p className="text-sm text-foreground/60 mb-2 font-semibold">PRECO ORIGINAL:</p>
+                <p className="text-2xl font-bold text-foreground/40 line-through mb-6">R$ 197,00</p>
                 
-                <div className="flex items-baseline gap-2 mb-4">
-                  <p className="text-4xl font-bold text-primary">R$ 49,90</p>
-                  <span className="bg-primary text-foreground px-3 py-1 rounded-full text-sm font-bold">-74%</span>
+                <div className="flex items-baseline gap-3 mb-6 bg-foreground/5 p-4 rounded-lg">
+                  <p className="text-5xl font-bold text-primary">R$ 49,90</p>
+                  <span className="bg-primary text-foreground px-4 py-2 rounded-full text-lg font-bold animate-pulse">-74%</span>
                 </div>
                 
-                <p className="text-sm text-primary font-semibold">Voce economiza: R$ 147,10</p>
+                <div className="bg-primary/20 p-3 rounded-lg">
+                  <p className="text-base text-primary font-bold">💰 Voce economiza: R$ 147,10</p>
+                </div>
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -184,11 +195,20 @@ export default function SalesPage() {
                 ))}
               </ul>
 
-              {/* Objection Breaker */}
-              <div className="bg-primary/10 p-4 rounded-lg mb-8 border border-primary/20">
-                <p className="text-sm text-foreground/80 italic">
-                  <strong>Menos que uma manicure.</strong> Por R$ 49,90, voce tem acesso vitalicio ao Manual da Atracao. Enquanto uma manicure dura 2 semanas, esse conhecimento transforma sua vida para sempre.
-                </p>
+              {/* Objection Breaker - AMPLIFIED */}
+              <div className="bg-gradient-to-r from-primary/20 via-primary/15 to-primary/20 p-6 rounded-lg mb-8 border-2 border-primary shadow-md">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">💅</span>
+                  <div>
+                    <p className="text-base text-foreground/90 leading-relaxed">
+                      <strong className="text-primary text-lg">Menos que uma manicure.</strong>
+                    </p>
+                    <p className="text-sm text-foreground/80 mt-2 leading-relaxed">
+                      Por R$ 49,90, voce tem acesso vitalicio ao Manual da Atracao. Enquanto uma manicure dura 2 semanas, esse conhecimento transforma sua vida para sempre.
+                    </p>
+                    <p className="text-xs text-primary font-semibold mt-3">✓ Investimento que dura a vida toda</p>
+                  </div>
+                </div>
               </div>
 
               <Button className="btn-primary w-full text-lg font-bold py-6">
