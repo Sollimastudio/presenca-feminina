@@ -45,19 +45,19 @@
 }
 
 :root {
-  /* Premium Color Palette */
-  --primary: oklch(0.7 0.18 20);      /* Rosé queimado */
+  /* Premium Color Palette - Dourado Envelhecido */
+  --primary: oklch(0.65 0.12 60);     /* Dourado envelhecido */
   --primary-foreground: oklch(1 0 0); /* Off-white */
-  --sidebar-primary: oklch(0.7 0.18 20);
+  --sidebar-primary: oklch(0.65 0.12 60);
   --sidebar-primary-foreground: oklch(1 0 0);
   
   /* Accent colors */
-  --accent: oklch(0.7 0.18 20);       /* Rosé queimado */
+  --accent: oklch(0.65 0.12 60);      /* Dourado envelhecido */
   --accent-foreground: oklch(1 0 0);
   
   /* Chart colors */
-  --chart-1: oklch(0.7 0.18 20);
-  --chart-2: oklch(0.65 0.15 25);
+  --chart-1: oklch(0.65 0.12 60);
+  --chart-2: oklch(0.6 0.1 65);
   --chart-3: oklch(0.6 0.12 30);
   --chart-4: oklch(0.55 0.1 35);
   --chart-5: oklch(0.5 0.08 40);

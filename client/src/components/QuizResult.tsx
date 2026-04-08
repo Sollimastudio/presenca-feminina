@@ -208,7 +208,7 @@ export default function QuizResult({
             onClick={handleGoToOffer}
             className="btn-primary text-lg"
           >
-            Sair e Ver a Solucao
+            Acessar a Rota de Fuga
           </Button>
           <Button
             onClick={onRestart}

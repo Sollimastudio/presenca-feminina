@@ -23,15 +23,15 @@ export default function SalesPage() {
           className="w-full lg:w-1/2 px-6 md:px-12 py-12 lg:py-0 flex flex-col justify-center"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Voce pode ter valor — mas esta transmitindo isso?
+            O seu valor esta trancado em um cofre. E voce perdeu a senha.
           </h1>
           <p className="text-xl text-foreground/70 mb-8 leading-relaxed">
-            Descubra quais padroes estao reduzindo sua leveza, sua receptividade e a forma como voce e percebida.
+            Descubra o padrao silencioso que esta matando a sua receptividade e entenda como voce realmente e lida pelos homens.
           </p>
 
           <div className="bg-secondary/50 p-8 rounded-lg border border-border mb-8">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Muita mulher acredita que esta se fortalecendo. Mas as vezes esta apenas se protegendo demais. Essa protecao excessiva diminui magnetismo e conexao. O ajuste nao e perder forca, e sim remover rigidez.
+              Voce jura que esta se fortalecendo, mas esta apenas assinando a sua propria invisibilidade. O excesso de defesa destroi a atracao. O ajuste nao e perder a forca, e abaixar as armas. Ressignifique o seu magnetismo.
             </p>
           </div>
 
@@ -58,14 +58,10 @@ export default function SalesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Rigidez excessiva que reduz sua leveza",
-              "Dificuldade em relaxar e receber",
-              "Frieza como mecanismo de protecao",
-              "Necessidade constante de provar seu valor",
-              "Magnetismo bloqueado pela defesa",
-              "Receptividade reduzida",
-              "Conexao limitada com os outros",
-              "Presenca percebida como distante",
+              "Frieza letal disfarcada de mecanismo de defesa",
+              "A compulsao exaustiva por provar que nao precisa de ninguem",
+              "Um campo de energia que bloqueia em vez de atrair",
+              "Distanciamento cronico: voce esta la, mas ninguem te acessa",
             ].map((signal, index) => (
               <motion.div
                 key={index}
@@ -98,14 +94,10 @@ export default function SalesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Leveza natural e autenticidade",
-              "Receptividade sem perder poder",
-              "Firmeza sem rigidez",
-              "Magnetismo genuino",
-              "Conexoes mais profundas",
-              "Presenca mais acessivel",
-              "Confianca em sua comunicacao",
-              "Valor percebido aumenta",
+              "Receptividade Magnetica: Atrair sem fazer forca",
+              "Firmeza sem Rigidez: O poder que nao precisa gritar para ser ouvido",
+              "A Arte do Contraste: Abaixar a guarda sem perder a coroa",
+              "Conexao Absoluta: Deixar de ser intocavel para se tornar inesquecivel",
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -168,7 +160,7 @@ export default function SalesPage() {
               </ul>
 
               <Button className="btn-primary w-full">
-                Quero Ajustar Minha Presenca
+                Acessar o Manual da Atracao
               </Button>
             </motion.div>
 

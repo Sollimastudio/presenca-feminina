@@ -188,23 +188,22 @@ export const diagnosisResults: Record<string, DiagnosisResult> = {
   },
   presencaModoDefesa: {
     id: "presencaModoDefesa",
-    name: "Presença em Modo Defesa",
-    description: "Você transmite armadura, controle e excesso de proteção.",
+    name: "Diagnóstico: A Mulher-Armadura",
+    description: "Você confunde rigidez com força. E é por isso que afasta quem tenta chegar perto.",
     mainSignals: [
-      "Excesso de rigidez e controle",
-      "Dificuldade em relaxar e receber",
-      "Frieza como mecanismo de proteção",
-      "Necessidade constante de provar valor",
-      "Leveza reduzida, magnetismo bloqueado",
+      "Frieza letal disfarçada de mecanismo de defesa",
+      "A compulsão exaustiva por provar que não precisa de ninguém",
+      "Um campo de energia que bloqueia em vez de atrair",
+      "Distanciamento crônico: você está lá, mas ninguém te acessa",
     ],
-    impact: "Você é percebida como alguém forte e competente, mas difícil de acessar. Sua intenção pode ser boa, mas o sinal emitido é de defesa, o que reduz sua leveza, receptividade e conexão.",
-    guidance: "Sua força é real, mas está sendo comunicada como armadura. O desafio não é perder força, é remover rigidez. Leveza não é fraqueza. Receptividade não é perda de poder. Firmeza não precisa ser dureza. Quando a proteção vira identidade, o magnetismo diminui.",
-    color: "#0B0B0B",
+    impact: "A sua força assusta, e a sua frieza afasta. Você construiu muros tão altos para não se machucar que acabou trancada do lado de dentro. Os homens veem a sua competência, mas esbarram no seu bloqueio.",
+    guidance: "Quem disse que a sua força precisa ser um escudo? Leveza não é fraqueza. Receptividade não é submissão. Quando a proteção vira a sua única identidade, o magnetismo morre.",
+    color: "#C6A769",
   },
 };
 
 export const diagnosisLadder = [
-  { level: 1, name: "Presença em Modo Defesa", description: "Armadura, controle, proteção excessiva" },
+  { level: 1, name: "Diagnóstico: A Mulher-Armadura", description: "Frieza letal, bloqueio de energia" },
   { level: 2, name: "Presença Instável", description: "Oscilação entre clareza e autossabotagem" },
   { level: 3, name: "Vênus em Construção", description: "Potencial em desenvolvimento, transição" },
   { level: 4, name: "Vênus Magnética", description: "Leveza, firmeza e receptividade" },
