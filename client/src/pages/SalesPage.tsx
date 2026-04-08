@@ -135,15 +135,40 @@ export default function SalesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-card p-8 md:p-12 rounded-lg border-2 border-border hover:border-primary transition-all"
+              className="bg-card p-8 md:p-12 rounded-lg border-2 border-primary relative overflow-hidden"
             >
-              <div className="w-12 h-1 bg-primary rounded-full mb-6" />
-              <h3 className="text-3xl font-bold text-foreground mb-4">
-                Ebook: Presenca Feminina
+              {/* Premium Seal */}
+              <div className="absolute top-4 right-4 bg-primary text-foreground px-3 py-1 rounded-full text-xs font-bold">
+                ✓ PREMIUM CERTIFICADO
+              </div>
+              
+              {/* Guarantee Badge */}
+              <div className="absolute top-4 left-4 bg-foreground text-background px-3 py-1 rounded-full text-xs font-bold">
+                GARANTIA 7 DIAS
+              </div>
+
+              <div className="w-12 h-1 bg-primary rounded-full mb-12 mt-6" />
+              <h3 className="text-3xl font-bold text-foreground mb-2">
+                Manual da Atracao
               </h3>
-              <p className="text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-sm text-primary font-semibold mb-4">Ebook Completo + Acesso Vitalicio</p>
+              
+              <p className="text-foreground/70 mb-8 leading-relaxed">
                 Correcao inicial, entendimento profundo e reorganizacao do seu padrao. Um guia pratico e reflexivo para remover a rigidez e recuperar sua leveza.
               </p>
+
+              {/* Pricing Section */}
+              <div className="bg-secondary/50 p-6 rounded-lg mb-8 border border-border">
+                <p className="text-sm text-foreground/60 mb-2">De:</p>
+                <p className="text-2xl font-bold text-foreground/40 line-through mb-4">R$ 197,00</p>
+                
+                <div className="flex items-baseline gap-2 mb-4">
+                  <p className="text-4xl font-bold text-primary">R$ 49,90</p>
+                  <span className="bg-primary text-foreground px-3 py-1 rounded-full text-sm font-bold">-74%</span>
+                </div>
+                
+                <p className="text-sm text-primary font-semibold">Voce economiza: R$ 147,10</p>
+              </div>
 
               <ul className="space-y-3 mb-8">
                 {[
@@ -159,7 +184,14 @@ export default function SalesPage() {
                 ))}
               </ul>
 
-              <Button className="btn-primary w-full">
+              {/* Objection Breaker */}
+              <div className="bg-primary/10 p-4 rounded-lg mb-8 border border-primary/20">
+                <p className="text-sm text-foreground/80 italic">
+                  <strong>Menos que uma manicure.</strong> Por R$ 49,90, voce tem acesso vitalicio ao Manual da Atracao. Enquanto uma manicure dura 2 semanas, esse conhecimento transforma sua vida para sempre.
+                </p>
+              </div>
+
+              <Button className="btn-primary w-full text-lg font-bold py-6">
                 Acessar o Manual da Atracao
               </Button>
             </motion.div>
@@ -200,7 +232,7 @@ export default function SalesPage() {
 
               <Button
                 disabled
-                className="btn-primary w-full opacity-50 cursor-not-allowed"
+                className="btn-primary w-full opacity-50 cursor-not-allowed py-6"
               >
                 Em Breve
               </Button>
