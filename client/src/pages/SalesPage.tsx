@@ -36,8 +36,10 @@ export default function SalesPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="btn-primary text-lg">
-              Quero Ajustar Minha Presenca
+            <Button asChild className="btn-primary text-lg">
+              <a href="https://pay.kiwify.com.br/Jb7MI2C" target="_blank" rel="noopener noreferrer">
+                Quero Ajustar Minha Presenca
+              </a>
             </Button>
           </div>
         </motion.div>
@@ -211,8 +213,10 @@ export default function SalesPage() {
                 </div>
               </div>
 
-              <Button className="btn-primary w-full text-lg font-bold py-6">
-                Acessar o Manual da Atracao
+              <Button asChild className="btn-primary w-full text-lg font-bold py-6">
+                <a href="https://pay.kiwify.com.br/Jb7MI2C" target="_blank" rel="noopener noreferrer">
+                  Acessar o Manual da Atracao
+                </a>
               </Button>
             </motion.div>
 
@@ -277,8 +281,10 @@ export default function SalesPage() {
             Nao e sobre perder forca. E sobre remover rigidez. Leveza nao e fraqueza. Receptividade nao e perda de poder. Quando a protecao deixa de ser identidade, o magnetismo volta.
           </p>
 
-          <Button className="btn-primary text-lg">
-            Quero Ajustar Minha Presenca
+          <Button asChild className="btn-primary text-lg">
+            <a href="https://pay.kiwify.com.br/Jb7MI2C" target="_blank" rel="noopener noreferrer">
+              Quero Ajustar Minha Presenca
+            </a>
           </Button>
         </div>
       </motion.section>

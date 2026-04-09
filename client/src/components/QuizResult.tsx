@@ -36,7 +36,7 @@ export default function QuizResult({
   const [, navigate] = useLocation();
 
   const handleGoToOffer = () => {
-    navigate("/oferta");
+    window.open("https://pay.kiwify.com.br/Jb7MI2C", "_blank", "noopener,noreferrer");
   };
 
   return (
