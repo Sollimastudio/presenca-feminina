@@ -64,10 +64,10 @@ export default function Quiz() {
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-                  Qual e sua presenca?
+                  O seu magnetismo virou repulsao?
                 </h1>
                 <p className="text-xl text-foreground/70 mb-8 leading-relaxed">
-                  Um diagnostico que revela os padroes invisiveis que estao reduzindo sua leveza, receptividade e magnetismo.
+                  O diagnostico visceral que revela os padroes invisiveis que estao sabotando o seu valor e te deixando intocavel.
                 </p>
               </motion.div>
 
@@ -78,7 +78,7 @@ export default function Quiz() {
                 className="bg-secondary/50 p-8 rounded-lg mb-8 border border-border"
               >
                 <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
-                  <strong>Antes de comecar, seja brutalmente honesta consigo mesma.</strong> Este teste nao mede quem voce gostaria de ser. Ele revela o padrao que aparece quando voce nao esta tentando impressionar ninguem. Se voce escolher sempre a resposta mais confortavel, o resultado vai mentir para voce. Nao ignore o obvio. Ninguem vai ver suas respostas — mas voce vai reconhecer o padrao.
+                  <strong>Antes de comecar, responda com brutalidade.</strong> Este teste nao acaricia o seu ego. Ele expoe o seu padrao quando as mascaras caem. Ninguem vai ver. Mas voce nao podera mais ignorar.
                 </p>
               </motion.div>
 
@@ -91,7 +91,7 @@ export default function Quiz() {
                   onClick={handleStartQuiz}
                   className="btn-primary text-lg w-full md:w-auto"
                 >
-                  Quero descobrir meu padrao
+                  Iniciar Raio-X
                 </Button>
               </motion.div>
             </div>

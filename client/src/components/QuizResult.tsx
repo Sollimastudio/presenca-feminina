@@ -36,7 +36,7 @@ export default function QuizResult({
   const [, navigate] = useLocation();
 
   const handleGoToOffer = () => {
-    navigate("/oferta");
+    window.open("https://pay.kiwify.com.br/Jb7MI2C", "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -208,7 +208,7 @@ export default function QuizResult({
             onClick={handleGoToOffer}
             className="btn-primary text-lg"
           >
-            Sair e Ver a Solucao
+            Acessar a Rota de Fuga
           </Button>
           <Button
             onClick={onRestart}

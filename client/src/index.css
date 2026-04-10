@@ -45,19 +45,19 @@
 }
 
 :root {
-  /* Premium Color Palette */
-  --primary: oklch(0.7 0.18 20);      /* Rosé queimado */
+  /* Premium Color Palette - Dourado Envelhecido */
+  --primary: oklch(0.65 0.12 60);     /* Dourado envelhecido */
   --primary-foreground: oklch(1 0 0); /* Off-white */
-  --sidebar-primary: oklch(0.7 0.18 20);
+  --sidebar-primary: oklch(0.65 0.12 60);
   --sidebar-primary-foreground: oklch(1 0 0);
   
   /* Accent colors */
-  --accent: oklch(0.7 0.18 20);       /* Rosé queimado */
+  --accent: oklch(0.65 0.12 60);      /* Dourado envelhecido */
   --accent-foreground: oklch(1 0 0);
   
   /* Chart colors */
-  --chart-1: oklch(0.7 0.18 20);
-  --chart-2: oklch(0.65 0.15 25);
+  --chart-1: oklch(0.65 0.12 60);
+  --chart-2: oklch(0.6 0.1 65);
   --chart-3: oklch(0.6 0.12 30);
   --chart-4: oklch(0.55 0.1 35);
   --chart-5: oklch(0.5 0.08 40);
@@ -217,11 +217,48 @@
     }
   }
   
-  /* Premium button variant */
+  /* Premium button variant - Metallic Gold */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold;
-    @apply hover:shadow-lg transition-all duration-300;
-    @apply active:scale-95;
+    @apply px-8 py-4 rounded-lg font-semibold text-foreground;
+    background: linear-gradient(135deg, #d4af37 0%, #c6a769 50%, #b8941f 100%);
+    box-shadow: 
+      0 4px 15px rgba(212, 175, 55, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -2px 5px rgba(0, 0, 0, 0.2);
+    @apply transition-all duration-300;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 
+      0 8px 25px rgba(212, 175, 55, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary:active {
+    @apply scale-95;
+    box-shadow: 
+      0 2px 8px rgba(212, 175, 55, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -2px 5px rgba(0, 0, 0, 0.3);
   }
   
   /* Progress bar styling */
