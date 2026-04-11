@@ -7,6 +7,7 @@ const RESULTADO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/31041966303242066
 interface DiagnosisResult {
   id: string;
   name: string;
+  tagline?: string;
   description: string;
   mainSignals: string[];
   impact: string;
@@ -78,9 +79,14 @@ export default function QuizResult({
               className="w-16 h-1 mb-6 rounded-full"
               style={{ backgroundColor: diagnosis.color }}
             />
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
               {diagnosis.name}
             </h2>
+            {diagnosis.tagline && (
+              <p className="text-lg font-semibold mb-4" style={{ color: diagnosis.color }}>
+                {diagnosis.tagline}
+              </p>
+            )}
             <p className="text-xl text-foreground/70 mb-8">
               {diagnosis.description}
             </p>
