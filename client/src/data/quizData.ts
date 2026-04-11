@@ -211,11 +211,11 @@ export const diagnosisLadder = [
 ];
 
 export function calculateDiagnosis(score: number): string {
-  if (score >= 20) {
-    return "presencaFeminina";
-  } else if (score >= 10) {
-    return "presencaInstavel";
+  if (score >= 24) {
+    return "presencaFeminina";   // 80%+ das respostas positivas
+  } else if (score >= 14) {
+    return "presencaInstavel";   // 47–79%
   } else {
-    return "presencaModoDefesa";
+    return "presencaModoDefesa"; // abaixo de 47% — maioria em modo defesa
   }
 }
