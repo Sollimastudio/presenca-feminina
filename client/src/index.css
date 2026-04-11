@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -45,97 +45,54 @@
 }
 
 :root {
-  /* Premium Color Palette - Dourado Envelhecido */
-  --primary: oklch(0.65 0.12 60);     /* Dourado envelhecido */
-  --primary-foreground: oklch(1 0 0); /* Off-white */
-  --sidebar-primary: oklch(0.65 0.12 60);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  
-  /* Accent colors */
-  --accent: oklch(0.65 0.12 60);      /* Dourado envelhecido */
-  --accent-foreground: oklch(1 0 0);
-  
-  /* Chart colors */
-  --chart-1: oklch(0.65 0.12 60);
-  --chart-2: oklch(0.6 0.1 65);
-  --chart-3: oklch(0.6 0.12 30);
-  --chart-4: oklch(0.55 0.1 35);
-  --chart-5: oklch(0.5 0.08 40);
-  
-  --radius: 0.5rem;
-  
-  /* Background & Foreground */
-  --background: oklch(0.98 0.001 60);  /* Off-white #FAF7F2 */
-  --foreground: oklch(0.08 0.01 0);    /* Preto #111111 */
-  
-  /* Card styling */
-  --card: oklch(1 0 0);                /* Branco puro */
-  --card-foreground: oklch(0.08 0.01 0);
-  
-  /* Popover */
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.08 0.01 0);
-  
-  /* Secondary */
-  --secondary: oklch(0.96 0.002 70);   /* Bege suave #F5F1EA */
-  --secondary-foreground: oklch(0.3 0.01 0);
-  
-  /* Muted */
-  --muted: oklch(0.93 0.002 70);
-  --muted-foreground: oklch(0.5 0.01 0);
-  
-  /* Destructive */
-  --destructive: oklch(0.7 0.18 20);
-  --destructive-foreground: oklch(1 0 0);
-  
-  /* Borders & Input */
-  --border: oklch(0.92 0.002 70);
-  --input: oklch(0.96 0.002 70);
-  --ring: oklch(0.7 0.18 20);
-  
-  /* Sidebar */
-  --sidebar: oklch(0.98 0.001 60);
-  --sidebar-foreground: oklch(0.08 0.01 0);
-  --sidebar-accent: oklch(0.7 0.18 20);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.92 0.002 70);
-  --sidebar-ring: oklch(0.7 0.18 20);
+  --radius: 0.25rem;
+
+  /* ESCURO — energia de tribunal, não de spa */
+  --background: #050505;
+  --foreground: #E8E0D0;
+
+  --card: #0f0f0f;
+  --card-foreground: #E8E0D0;
+
+  --popover: #0f0f0f;
+  --popover-foreground: #E8E0D0;
+
+  /* Dourado Sol Lima */
+  --primary: #C9A84C;
+  --primary-foreground: #050505;
+
+  --secondary: #131313;
+  --secondary-foreground: #999080;
+
+  --muted: #1a1a1a;
+  --muted-foreground: #666050;
+
+  --accent: #C9A84C;
+  --accent-foreground: #050505;
+
+  --destructive: #c0392b;
+  --destructive-foreground: #E8E0D0;
+
+  --border: rgba(201, 168, 76, 0.15);
+  --input: #1a1a1a;
+  --ring: #C9A84C;
+
+  --sidebar: #050505;
+  --sidebar-foreground: #E8E0D0;
+  --sidebar-primary: #C9A84C;
+  --sidebar-primary-foreground: #050505;
+  --sidebar-accent: #131313;
+  --sidebar-accent-foreground: #E8E0D0;
+  --sidebar-border: rgba(201, 168, 76, 0.15);
+  --sidebar-ring: #C9A84C;
+
+  --chart-1: #C9A84C;
+  --chart-2: #a08030;
+  --chart-3: #7a6020;
+  --chart-4: #504010;
+  --chart-5: #2a2005;
 }
 
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
-}
 
 @layer base {
   * {
@@ -144,9 +101,9 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Lora', serif;
+    font-family: 'Inter', sans-serif;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -217,15 +174,11 @@
     }
   }
   
-  /* Premium button variant - Metallic Gold */
+  /* Button - Dourado sobre preto */
   .btn-primary {
-    @apply px-8 py-4 rounded-lg font-semibold text-foreground;
-    background: linear-gradient(135deg, #d4af37 0%, #c6a769 50%, #b8941f 100%);
-    box-shadow: 
-      0 4px 15px rgba(212, 175, 55, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3),
-      inset 0 -2px 5px rgba(0, 0, 0, 0.2);
-    @apply transition-all duration-300;
+    @apply px-8 py-4 rounded-sm font-bold text-[#050505] tracking-wide uppercase text-sm;
+    background: #C9A84C;
+    @apply transition-all duration-200;
     position: relative;
     overflow: hidden;
   }
@@ -246,19 +199,12 @@
   }
   
   .btn-primary:hover {
-    box-shadow: 
-      0 8px 25px rgba(212, 175, 55, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4),
-      inset 0 -2px 5px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
+    background: #d4a017;
+    transform: scale(1.01);
   }
-  
+
   .btn-primary:active {
     @apply scale-95;
-    box-shadow: 
-      0 2px 8px rgba(212, 175, 55, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      inset 0 -2px 5px rgba(0, 0, 0, 0.3);
   }
   
   /* Progress bar styling */
