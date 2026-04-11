@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { quizQuestions, calculateDiagnosis, diagnosisResults, diagnosisLadder } from "@/data/quizData";
 import { Button } from "@/components/ui/button";
 import QuizResult from "@/components/QuizResult";
+import { track } from "@/lib/tracker";
 
 const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032420666/7UJh3d9596UnSnriY2LXYF/hero-quiz-6cbhb9WsucGBWuRXQZbFtx.webp";
 
@@ -20,11 +21,14 @@ export default function Quiz() {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowResult(true);
+      const diagId = calculateDiagnosis(newScore);
+      track('quiz_completed', diagnosisResults[diagId]?.name);
     }
   };
 
   const handleStartQuiz = () => {
     setShowIntro(false);
+    track('quiz_started');
   };
 
   const handleRestartQuiz = () => {
